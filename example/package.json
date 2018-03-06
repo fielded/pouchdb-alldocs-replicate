@@ -1,0 +1,23 @@
+{
+  "name": "pouchdb-alldocs-replicate-example",
+  "version": "1.0.0",
+  "description": "Example of using pouchdb-alldocs-replicate",
+  "private": true,
+  "main": "example.js",
+  "scripts": {
+    "start": "watchify example.js -o dist/example.js",
+    "build": "mkdir -p dist && browserify example.js > dist/example.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kev.doran@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^16.1.0",
+    "pouchdb-adapter-http": "^6.4.3",
+    "pouchdb-adapter-idb": "^6.4.3",
+    "pouchdb-core": "^6.4.3",
+    "pouchdb-replication": "^6.4.3",
+    "watchify": "^3.11.0"
+  }
+}

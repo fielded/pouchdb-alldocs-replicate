@@ -1,0 +1,30 @@
+{
+  "name": "pouchdb-alldocs-replicate",
+  "version": "1.0.0",
+  "description": "One shot replication from remote using allDocs and PouchDB checkpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fielded/pouchdb-alldocs-replicate.git"
+  },
+  "keywords": [
+    "pouchdb"
+  ],
+  "author": "kev.doran@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fielded/pouchdb-alldocs-replicate/issues"
+  },
+  "homepage": "https://github.com/fielded/pouchdb-alldocs-replicate#readme",
+  "devDependencies": {
+    "tap": "^11.1.1"
+  },
+  "dependencies": {
+    "pouchdb-checkpointer": "6.4.3",
+    "pouchdb-generate-replication-id": "6.4.3",
+    "uuid": "^3.2.1"
+  }
+}
