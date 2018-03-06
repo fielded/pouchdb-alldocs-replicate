@@ -16,8 +16,11 @@
     "browserify": "^16.1.0",
     "pouchdb-adapter-http": "^6.4.3",
     "pouchdb-adapter-idb": "^6.4.3",
-    "pouchdb-core": "^6.4.3",
-    "pouchdb-replication": "^6.4.3",
     "watchify": "^3.11.0"
+  },
+  "devDependencies": {
+    "pouchdb-adapter-memory": "^6.4.3",
+    "pouchdb-core": "^6.4.3",
+    "pouchdb-replication": "^6.4.3"
   }
 }

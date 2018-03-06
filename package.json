@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/fielded/pouchdb-alldocs-replicate#readme",
   "devDependencies": {
+    "pouchdb-adapter-http": "^6.4.3",
+    "pouchdb-adapter-memory": "^6.4.3",
+    "pouchdb-core": "^6.4.3",
+    "pouchdb-replication": "^6.4.3",
+    "sinon": "^4.4.2",
     "tap": "^11.1.1"
   },
   "dependencies": {
