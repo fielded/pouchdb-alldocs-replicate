@@ -54,7 +54,7 @@ function allDocsWithProgress (remoteDb, onProgressCallback) {
   return remoteDb.info().then(function (info) {
     var total = info.disk_size
     onProgressCallback(0, total)
-    var url = remoteDb.name + '/_all_docs?include_docs=true&update_seq=true'
+    var url = remoteDb.__opts.name + '/_all_docs?include_docs=true&update_seq=true'
     return new Promise(function (resolve, reject) {
       var xhr = new XMLHttpRequest()
       xhr.withCredentials = true

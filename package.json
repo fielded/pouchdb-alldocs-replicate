@@ -2,9 +2,10 @@
   "name": "pouchdb-alldocs-replicate",
   "version": "1.0.0",
   "description": "One shot replication from remote using allDocs and PouchDB checkpoints",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "build": "mkdir -p dist && browserify index.js --standalone allDocsReplicate > dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/fielded/pouchdb-alldocs-replicate#readme",
   "devDependencies": {
+    "browserify": "^16.1.1",
     "pouchdb-adapter-http": "^6.4.3",
     "pouchdb-adapter-memory": "^6.4.3",
     "pouchdb-core": "^6.4.3",
