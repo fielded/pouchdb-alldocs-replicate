@@ -2,10 +2,11 @@
   "name": "pouchdb-alldocs-replicate",
   "version": "1.0.0",
   "description": "One shot replication from remote using allDocs and PouchDB checkpoints",
-  "main": "dist/index.js",
+  "main": "dist/pouchdb-alldocs-replicate.js",
   "scripts": {
-    "test": "node test",
-    "build": "mkdir -p dist && browserify index.js --standalone allDocsReplicate > dist/index.js"
+    "build": "microbundle --format cjs --no-compress --no-sourcemap",
+    "pretest": "npm run build",
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -20,18 +21,18 @@
     "url": "https://github.com/fielded/pouchdb-alldocs-replicate/issues"
   },
   "homepage": "https://github.com/fielded/pouchdb-alldocs-replicate#readme",
-  "devDependencies": {
-    "browserify": "^16.1.1",
-    "pouchdb-adapter-http": "^6.4.3",
-    "pouchdb-adapter-memory": "^6.4.3",
-    "pouchdb-core": "^6.4.3",
-    "pouchdb-replication": "^6.4.3",
-    "sinon": "^4.4.2",
-    "tap": "^11.1.1"
-  },
   "dependencies": {
     "pouchdb-checkpointer": "6.4.3",
     "pouchdb-generate-replication-id": "6.4.3",
-    "uuid": "^3.2.1"
+    "uuid": "3.2.1"
+  },
+  "devDependencies": {
+    "microbundle": "0.4.4",
+    "pouchdb-adapter-http": "6.4.3",
+    "pouchdb-adapter-memory": "6.4.3",
+    "pouchdb-core": "6.4.3",
+    "pouchdb-replication": "6.4.3",
+    "sinon": "4.4.2",
+    "tap": "11.1.1"
   }
 }

@@ -1,5 +1,5 @@
 const PouchDB = require('pouchdb-core')
-const allDocsReplicatePlugin = require('./index')
+const allDocsReplicatePlugin = require('./dist/pouchdb-alldocs-replicate')
 const sinon = require('sinon')
 
 const tap = require('tap')

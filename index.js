@@ -1,14 +1,10 @@
 // uuid/v4 is what pouchdb/utils uses
-var uuid = require('uuid').v4
-var Checkpointer = require('pouchdb-checkpointer')
-var generateReplicationId = require('pouchdb-generate-replication-id')
-
-module.exports = {
-  maybeAllDocsReplicate: maybeAllDocsReplicate
-}
+import uuid from 'uuid/v4'
+import Checkpointer from 'pouchdb-checkpointer'
+import generateReplicationId from 'pouchdb-generate-replication-id'
 
 // Only try one shot if we've never seen this replication id.
-function maybeAllDocsReplicate (localDb, onProgressCallback) {
+export function maybeAllDocsReplicate (localDb, onProgressCallback) {
   var remoteDb = this
   return generateReplicationId(remoteDb, localDb, {})
     .then(downloadRepId => {
